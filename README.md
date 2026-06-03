@@ -4,6 +4,8 @@ A Chrome extension that lets BBO users build practice sets from curated bidding 
 
 Pick one or more scenarios, choose how many deals you want and whether they're selected randomly or sequentially, and click Upload. The extension fetches scenario PBN files from a hosted index, converts the selected deals to LIN format (shuffling deals from multiple scenarios together), and uploads the result to your Deal archive using your existing BBO login.
 
+Scenario deals come from the curated [Practice-Bidding-Scenarios](https://github.com/ADavidBailey/Practice-Bidding-Scenarios) collection (bba-filtered), pre-converted to LIN at build time and served from this repo.
+
 See [docs/PLAN.md](docs/PLAN.md) for the implementation plan.
 
 ## Status
