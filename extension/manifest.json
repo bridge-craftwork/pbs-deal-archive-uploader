@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "PBS Deal Archive Uploader",
+  "version": "0.1.0",
+  "description": "Build practice sets from Practice Bidding Scenarios and upload them to your Bridge Base Online Deal archive.",
+  "permissions": ["storage", "sidePanel"],
+  "host_permissions": [
+    "https://www.bridgebase.com/*",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "side_panel": { "default_path": "panel.html" },
+  "action": { "default_title": "PBS Deal Archive Uploader" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.bridgebase.com/v3/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
