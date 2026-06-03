@@ -35,7 +35,7 @@
   const visible = (e) => e && e.offsetWidth > 0 && e.offsetHeight > 0;
 
   function leafByText(text, root = document) {
-    return [...root.querySelectorAll("div,span,a,button,td,li")].find(
+    return [...root.querySelectorAll("p,div,span,a,button,td,li,ion-label")].find(
       (e) => e.children.length === 0 && e.textContent.trim() === text && visible(e)
     );
   }
