@@ -1,0 +1,1602 @@
+[
+ {
+  "name": "1C_WalshStyle",
+  "file": "1C_WalshStyle.lin",
+  "dealCount": 476
+ },
+ {
+  "name": "1N",
+  "file": "1N.lin",
+  "dealCount": 432
+ },
+ {
+  "name": "1N_5M_and_6m",
+  "file": "1N_5M_and_6m.lin",
+  "dealCount": 425
+ },
+ {
+  "name": "1N_with_Singleton",
+  "file": "1N_with_Singleton.lin",
+  "dealCount": 158
+ },
+ {
+  "name": "1m-1N",
+  "file": "1m-1N.lin",
+  "dealCount": 296
+ },
+ {
+  "name": "1m-1_2_or_3_NT",
+  "file": "1m-1_2_or_3_NT.lin",
+  "dealCount": 243
+ },
+ {
+  "name": "1m-2N",
+  "file": "1m-2N.lin",
+  "dealCount": 125
+ },
+ {
+  "name": "1m-3N",
+  "file": "1m-3N.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "1m_1x_2m",
+  "file": "1m_1x_2m.lin",
+  "dealCount": 439
+ },
+ {
+  "name": "2N",
+  "file": "2N.lin",
+  "dealCount": 433
+ },
+ {
+  "name": "2N_Smolen",
+  "file": "2N_Smolen.lin",
+  "dealCount": 452
+ },
+ {
+  "name": "2N_and_1_Minor",
+  "file": "2N_and_1_Minor.lin",
+  "dealCount": 277
+ },
+ {
+  "name": "2N_and_3C_Response",
+  "file": "2N_and_3C_Response.lin",
+  "dealCount": 424
+ },
+ {
+  "name": "2N_and_Balanced",
+  "file": "2N_and_Balanced.lin",
+  "dealCount": 432
+ },
+ {
+  "name": "2N_and_MSS",
+  "file": "2N_and_MSS.lin",
+  "dealCount": 205
+ },
+ {
+  "name": "2N_and_Transfers",
+  "file": "2N_and_Transfers.lin",
+  "dealCount": 439
+ },
+ {
+  "name": "3N",
+  "file": "3N.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "3N_over_LHO_3x",
+  "file": "3N_over_LHO_3x.lin",
+  "dealCount": 129
+ },
+ {
+  "name": "3N_over_RHO_3x",
+  "file": "3N_over_RHO_3x.lin",
+  "dealCount": 127
+ },
+ {
+  "name": "3_Under_Invitational_Jump",
+  "file": "3_Under_Invitational_Jump.lin",
+  "dealCount": 314
+ },
+ {
+  "name": "5431_After_NT",
+  "file": "5431_After_NT.lin",
+  "dealCount": 407
+ },
+ {
+  "name": "After_1M_2M",
+  "file": "After_1M_2M.lin",
+  "dealCount": 467
+ },
+ {
+  "name": "After_1x_1N",
+  "file": "After_1x_1N.lin",
+  "dealCount": 323
+ },
+ {
+  "name": "After_2_Passes",
+  "file": "After_2_Passes.lin",
+  "dealCount": 353
+ },
+ {
+  "name": "After_3_Passes",
+  "file": "After_3_Passes.lin",
+  "dealCount": 379
+ },
+ {
+  "name": "After_Opp_Overcalls",
+  "file": "After_Opp_Overcalls.lin",
+  "dealCount": 414
+ },
+ {
+  "name": "After_Partner_Overcalls",
+  "file": "After_Partner_Overcalls.lin",
+  "dealCount": 490
+ },
+ {
+  "name": "Any_5422_with_15-16",
+  "file": "Any_5422_with_15-16.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Any_5422_with_15-17",
+  "file": "Any_5422_with_15-17.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "BART",
+  "file": "BART.lin",
+  "dealCount": 369
+ },
+ {
+  "name": "Balancing",
+  "file": "Balancing.lin",
+  "dealCount": 487
+ },
+ {
+  "name": "Basic_Major",
+  "file": "Basic_Major.lin",
+  "dealCount": 294
+ },
+ {
+  "name": "Basic_Minor",
+  "file": "Basic_Minor.lin",
+  "dealCount": 317
+ },
+ {
+  "name": "Basic_NT",
+  "file": "Basic_NT.lin",
+  "dealCount": 460
+ },
+ {
+  "name": "Basic_Overcall",
+  "file": "Basic_Overcall.lin",
+  "dealCount": 295
+ },
+ {
+  "name": "Basic_Takeout_Double",
+  "file": "Basic_Takeout_Double.lin",
+  "dealCount": 448
+ },
+ {
+  "name": "Basic_Weak_2",
+  "file": "Basic_Weak_2.lin",
+  "dealCount": 360
+ },
+ {
+  "name": "Basic_What_To_Open",
+  "file": "Basic_What_To_Open.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Benjamin_2D",
+  "file": "Benjamin_2D.lin",
+  "dealCount": 418
+ },
+ {
+  "name": "Bergen_Raises",
+  "file": "Bergen_Raises.lin",
+  "dealCount": 132
+ },
+ {
+  "name": "Better_Minor_Lebensohl",
+  "file": "Better_Minor_Lebensohl.lin",
+  "dealCount": 463
+ },
+ {
+  "name": "Cappelletti",
+  "file": "Cappelletti.lin",
+  "dealCount": 340
+ },
+ {
+  "name": "Cappelletti_in_4th",
+  "file": "Cappelletti_in_4th.lin",
+  "dealCount": 257
+ },
+ {
+  "name": "Choice_Of_Finesses",
+  "file": "Choice_Of_Finesses.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "DOPI_ROPI",
+  "file": "DOPI_ROPI.lin",
+  "dealCount": 5
+ },
+ {
+  "name": "Dealing_with_Ovecalls_Strong",
+  "file": "Dealing_with_Ovecalls_Strong.lin",
+  "dealCount": 367
+ },
+ {
+  "name": "Dealing_with_Overcalls_Strong",
+  "file": "Dealing_with_Overcalls_Strong.lin",
+  "dealCount": 389
+ },
+ {
+  "name": "Dealing_with_Overcalls_Weak",
+  "file": "Dealing_with_Overcalls_Weak.lin",
+  "dealCount": 418
+ },
+ {
+  "name": "Double_Showing_2_Suits",
+  "file": "Double_Showing_2_Suits.lin",
+  "dealCount": 281
+ },
+ {
+  "name": "Double_by_Advancer",
+  "file": "Double_by_Advancer.lin",
+  "dealCount": 84
+ },
+ {
+  "name": "Double_double",
+  "file": "Double_double.lin",
+  "dealCount": 58
+ },
+ {
+  "name": "DropDead_Crawling",
+  "file": "DropDead_Crawling.lin",
+  "dealCount": 164
+ },
+ {
+  "name": "Drury",
+  "file": "Drury.lin",
+  "dealCount": 467
+ },
+ {
+  "name": "Endplay_3rd_Round_Strip",
+  "file": "Endplay_3rd_Round_Strip.lin",
+  "dealCount": 376
+ },
+ {
+  "name": "Equal_Level_Conversion",
+  "file": "Equal_Level_Conversion.lin",
+  "dealCount": 384
+ },
+ {
+  "name": "Exclusion_After_1M",
+  "file": "Exclusion_After_1M.lin",
+  "dealCount": 405
+ },
+ {
+  "name": "Exclusion_After_Sta_Jac",
+  "file": "Exclusion_After_Sta_Jac.lin",
+  "dealCount": 368
+ },
+ {
+  "name": "Exit_Transfers",
+  "file": "Exit_Transfers.lin",
+  "dealCount": 250
+ },
+ {
+  "name": "Finesse_Simple",
+  "file": "Finesse_Simple.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Fit_Showing_Jumps",
+  "file": "Fit_Showing_Jumps.lin",
+  "dealCount": 104
+ },
+ {
+  "name": "Flannery",
+  "file": "Flannery.lin",
+  "dealCount": 499
+ },
+ {
+  "name": "Forcing_NT",
+  "file": "Forcing_NT.lin",
+  "dealCount": 352
+ },
+ {
+  "name": "Forcing_Pass",
+  "file": "Forcing_Pass.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Found_Endplay",
+  "file": "Found_Endplay.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Found_Rabbis_Rule",
+  "file": "Found_Rabbis_Rule.lin",
+  "dealCount": 156
+ },
+ {
+  "name": "Fourth_Bid_Inviting",
+  "file": "Fourth_Bid_Inviting.lin",
+  "dealCount": 439
+ },
+ {
+  "name": "Fourth_Suit_Forcing",
+  "file": "Fourth_Suit_Forcing.lin",
+  "dealCount": 193
+ },
+ {
+  "name": "GIB_1C-P-Resp",
+  "file": "GIB_1C-P-Resp.lin",
+  "dealCount": 470
+ },
+ {
+  "name": "GIB_1M-P-Resp",
+  "file": "GIB_1M-P-Resp.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "GIB_1N-P-2C-BID",
+  "file": "GIB_1N-P-2C-BID.lin",
+  "dealCount": 426
+ },
+ {
+  "name": "GIB_1N-P-2C",
+  "file": "GIB_1N-P-2C.lin",
+  "dealCount": 459
+ },
+ {
+  "name": "GIB_1N",
+  "file": "GIB_1N.lin",
+  "dealCount": 489
+ },
+ {
+  "name": "GIB_1N5422",
+  "file": "GIB_1N5422.lin",
+  "dealCount": 195
+ },
+ {
+  "name": "GIB_1N_Basic",
+  "file": "GIB_1N_Basic.lin",
+  "dealCount": 444
+ },
+ {
+  "name": "GIB_NT-P-2C-BID",
+  "file": "GIB_NT-P-2C-BID.lin",
+  "dealCount": 435
+ },
+ {
+  "name": "GIB_Overcall_with_4",
+  "file": "GIB_Overcall_with_4.lin",
+  "dealCount": 499
+ },
+ {
+  "name": "GIB_Resp_to_1C",
+  "file": "GIB_Resp_to_1C.lin",
+  "dealCount": 495
+ },
+ {
+  "name": "GIB_Sandwich_NT_BPH",
+  "file": "GIB_Sandwich_NT_BPH.lin",
+  "dealCount": 379
+ },
+ {
+  "name": "GSF_after_Preempt",
+  "file": "GSF_after_Preempt.lin",
+  "dealCount": 499
+ },
+ {
+  "name": "Gambling_3N",
+  "file": "Gambling_3N.lin",
+  "dealCount": 494
+ },
+ {
+  "name": "Game_Forcing_2C",
+  "file": "Game_Forcing_2C.lin",
+  "dealCount": 492
+ },
+ {
+  "name": "Game_Overcalls",
+  "file": "Game_Overcalls.lin",
+  "dealCount": 304
+ },
+ {
+  "name": "Gavin_3-Card_Limit_Raise",
+  "file": "Gavin_3-Card_Limit_Raise.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_3_Under_Invitational_Jump",
+  "file": "Gavin_3_Under_Invitational_Jump.lin",
+  "dealCount": 331
+ },
+ {
+  "name": "Gavin_4-Card_Limit_Raise",
+  "file": "Gavin_4-Card_Limit_Raise.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_Mixed_Raise",
+  "file": "Gavin_Mixed_Raise.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_Passed_Hand_Response_Structure",
+  "file": "Gavin_Passed_Hand_Response_Structure.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_Semi-Constructive_Raise",
+  "file": "Gavin_Semi-Constructive_Raise.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_Semi-Forcing_NT_with_Fit",
+  "file": "Gavin_Semi-Forcing_NT_with_Fit.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_Strong_Splinter",
+  "file": "Gavin_Strong_Splinter.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_Transfers_after_2N_Rebid_Bal",
+  "file": "Gavin_Transfers_after_2N_Rebid_Bal.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_Transfers_after_2N_Rebid_Unb",
+  "file": "Gavin_Transfers_after_2N_Rebid_Unb.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_Transfers_after_2N_Rebid_Weak",
+  "file": "Gavin_Transfers_after_2N_Rebid_Weak.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gavin_Weak_Splinter",
+  "file": "Gavin_Weak_Splinter.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Gazzilli",
+  "file": "Gazzilli.lin",
+  "dealCount": 439
+ },
+ {
+  "name": "Gerber_By_Responder",
+  "file": "Gerber_By_Responder.lin",
+  "dealCount": 196
+ },
+ {
+  "name": "Going_for_Blood",
+  "file": "Going_for_Blood.lin",
+  "dealCount": 403
+ },
+ {
+  "name": "Goulash",
+  "file": "Goulash.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Grand_Slam_Force",
+  "file": "Grand_Slam_Force.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Grand_Slam_Force_2",
+  "file": "Grand_Slam_Force_2.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Grand_Slam_Invite",
+  "file": "Grand_Slam_Invite.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Help_Suit_Game_Try",
+  "file": "Help_Suit_Game_Try.lin",
+  "dealCount": 49
+ },
+ {
+  "name": "Hold_Up_3N",
+  "file": "Hold_Up_3N.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Impossible_2S",
+  "file": "Impossible_2S.lin",
+  "dealCount": 153
+ },
+ {
+  "name": "Inverted_Minors",
+  "file": "Inverted_Minors.lin",
+  "dealCount": 424
+ },
+ {
+  "name": "Jacoby_2N",
+  "file": "Jacoby_2N.lin",
+  "dealCount": 384
+ },
+ {
+  "name": "Jacoby_2N_4x_void",
+  "file": "Jacoby_2N_4x_void.lin",
+  "dealCount": 414
+ },
+ {
+  "name": "Jacoby_2N_4x_void_Leveled",
+  "file": "Jacoby_2N_4x_void_Leveled.lin",
+  "dealCount": 394
+ },
+ {
+  "name": "Jacoby_2N_Leveled",
+  "file": "Jacoby_2N_Leveled.lin",
+  "dealCount": 374
+ },
+ {
+  "name": "Jacoby_Super-Accept",
+  "file": "Jacoby_Super-Accept.lin",
+  "dealCount": 373
+ },
+ {
+  "name": "Jacoby_Transfer",
+  "file": "Jacoby_Transfer.lin",
+  "dealCount": 477
+ },
+ {
+  "name": "Jordan_2N",
+  "file": "Jordan_2N.lin",
+  "dealCount": 344
+ },
+ {
+  "name": "Jump_Cuebid_Strong",
+  "file": "Jump_Cuebid_Strong.lin",
+  "dealCount": 366
+ },
+ {
+  "name": "Jump_Cuebid_Weak",
+  "file": "Jump_Cuebid_Weak.lin",
+  "dealCount": 397
+ },
+ {
+  "name": "Jump_Overcalls",
+  "file": "Jump_Overcalls.lin",
+  "dealCount": 402
+ },
+ {
+  "name": "Kokish_Relay",
+  "file": "Kokish_Relay.lin",
+  "dealCount": 264
+ },
+ {
+  "name": "Last_Train_GT2",
+  "file": "Last_Train_GT2.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Last_Train_Game_Try",
+  "file": "Last_Train_Game_Try.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Lead_Directing_Double",
+  "file": "Lead_Directing_Double.lin",
+  "dealCount": 403
+ },
+ {
+  "name": "Leaping_Michael",
+  "file": "Leaping_Michael.lin",
+  "dealCount": 287
+ },
+ {
+  "name": "Leaping_Michaels",
+  "file": "Leaping_Michaels.lin",
+  "dealCount": 293
+ },
+ {
+  "name": "Lebensohl",
+  "file": "Lebensohl.lin",
+  "dealCount": 187
+ },
+ {
+  "name": "Lebensohl_vs_Opps_W2_Bal",
+  "file": "Lebensohl_vs_Opps_W2_Bal.lin",
+  "dealCount": 383
+ },
+ {
+  "name": "Lebensohl_vs_Opps_W2_Bal_or_Dir",
+  "file": "Lebensohl_vs_Opps_W2_Bal_or_Dir.lin",
+  "dealCount": 405
+ },
+ {
+  "name": "Lebensohl_vs_Opps_W2_Dir",
+  "file": "Lebensohl_vs_Opps_W2_Dir.lin",
+  "dealCount": 421
+ },
+ {
+  "name": "Losing_Trick_Count",
+  "file": "Losing_Trick_Count.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "MST_or_MSS",
+  "file": "MST_or_MSS.lin",
+  "dealCount": 463
+ },
+ {
+  "name": "Major_Opener",
+  "file": "Major_Opener.lin",
+  "dealCount": 490
+ },
+ {
+  "name": "Major_Suit_Fit",
+  "file": "Major_Suit_Fit.lin",
+  "dealCount": 243
+ },
+ {
+  "name": "Maximal_After_Overcall",
+  "file": "Maximal_After_Overcall.lin",
+  "dealCount": 142
+ },
+ {
+  "name": "Maximal_Double",
+  "file": "Maximal_Double.lin",
+  "dealCount": 204
+ },
+ {
+  "name": "McCabe_After_Weak_2",
+  "file": "McCabe_After_Weak_2.lin",
+  "dealCount": 456
+ },
+ {
+  "name": "McCabe_after_WJO",
+  "file": "McCabe_after_WJO.lin",
+  "dealCount": 235
+ },
+ {
+  "name": "Meckwell",
+  "file": "Meckwell.lin",
+  "dealCount": 347
+ },
+ {
+  "name": "Michaels_Cuebid",
+  "file": "Michaels_Cuebid.lin",
+  "dealCount": 456
+ },
+ {
+  "name": "Michaels_after_1m",
+  "file": "Michaels_after_1m.lin",
+  "dealCount": 411
+ },
+ {
+  "name": "Michaels_and_Unusual",
+  "file": "Michaels_and_Unusual.lin",
+  "dealCount": 415
+ },
+ {
+  "name": "Minor_Game_Or_Slam",
+  "file": "Minor_Game_Or_Slam.lin",
+  "dealCount": 344
+ },
+ {
+  "name": "Minor_Suit_Opener",
+  "file": "Minor_Suit_Opener.lin",
+  "dealCount": 498
+ },
+ {
+  "name": "Minor_Suit_Opener_Balanced_Response",
+  "file": "Minor_Suit_Opener_Balanced_Response.lin",
+  "dealCount": 452
+ },
+ {
+  "name": "Minor_Suit_Opener_Inv_Raise",
+  "file": "Minor_Suit_Opener_Inv_Raise.lin",
+  "dealCount": 99
+ },
+ {
+  "name": "Minor_Suit_Opener_Mixed_Raise",
+  "file": "Minor_Suit_Opener_Mixed_Raise.lin",
+  "dealCount": 157
+ },
+ {
+  "name": "Minor_Suit_Opener_Resp_Structure",
+  "file": "Minor_Suit_Opener_Resp_Structure.lin",
+  "dealCount": 363
+ },
+ {
+  "name": "Minor_Suit_Response_Structure",
+  "file": "Minor_Suit_Response_Structure.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Minor_Suit_Stayman",
+  "file": "Minor_Suit_Stayman.lin",
+  "dealCount": 432
+ },
+ {
+  "name": "Minor_Suit_Transfer",
+  "file": "Minor_Suit_Transfer.lin",
+  "dealCount": 492
+ },
+ {
+  "name": "Misfit",
+  "file": "Misfit.lin",
+  "dealCount": 499
+ },
+ {
+  "name": "Misfit6-5",
+  "file": "Misfit6-5.lin",
+  "dealCount": 241
+ },
+ {
+  "name": "Misfit_06-10",
+  "file": "Misfit_06-10.lin",
+  "dealCount": 491
+ },
+ {
+  "name": "Misfit_11-12",
+  "file": "Misfit_11-12.lin",
+  "dealCount": 494
+ },
+ {
+  "name": "Misfit_13-Plus",
+  "file": "Misfit_13-Plus.lin",
+  "dealCount": 496
+ },
+ {
+  "name": "Mixed_Raise_In_Comp",
+  "file": "Mixed_Raise_In_Comp.lin",
+  "dealCount": 106
+ },
+ {
+  "name": "Muiderberg_Two_Bids",
+  "file": "Muiderberg_Two_Bids.lin",
+  "dealCount": 171
+ },
+ {
+  "name": "Multi_2D",
+  "file": "Multi_2D.lin",
+  "dealCount": 351
+ },
+ {
+  "name": "Multi_Landy",
+  "file": "Multi_Landy.lin",
+  "dealCount": 253
+ },
+ {
+  "name": "NT_Ladder",
+  "file": "NT_Ladder.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "NT_Splinter",
+  "file": "NT_Splinter.lin",
+  "dealCount": 365
+ },
+ {
+  "name": "Namyats",
+  "file": "Namyats.lin",
+  "dealCount": 169
+ },
+ {
+  "name": "Ned_2S",
+  "file": "Ned_2S.lin",
+  "dealCount": 131
+ },
+ {
+  "name": "Ned_3-Level_Resp_to_1N",
+  "file": "Ned_3-Level_Resp_to_1N.lin",
+  "dealCount": 394
+ },
+ {
+  "name": "Ned_Weak_Two",
+  "file": "Ned_Weak_Two.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Ned_Weak_Two_Leveled",
+  "file": "Ned_Weak_Two_Leveled.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Negative_Double",
+  "file": "Negative_Double.lin",
+  "dealCount": 146
+ },
+ {
+  "name": "Negative_Free_Bid",
+  "file": "Negative_Free_Bid.lin",
+  "dealCount": 172
+ },
+ {
+  "name": "New_Minor_Forcing",
+  "file": "New_Minor_Forcing.lin",
+  "dealCount": 325
+ },
+ {
+  "name": "Non_Leaping_Michaels_After_2-Bid",
+  "file": "Non_Leaping_Michaels_After_2-Bid.lin",
+  "dealCount": 243
+ },
+ {
+  "name": "Non_Leaping_Michaels_After_3-Bid",
+  "file": "Non_Leaping_Michaels_After_3-Bid.lin",
+  "dealCount": 93
+ },
+ {
+  "name": "Notrump_18-19",
+  "file": "Notrump_18-19.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "OBAR_BIDS",
+  "file": "OBAR_BIDS.lin",
+  "dealCount": 209
+ },
+ {
+  "name": "OBAR_BIDS11",
+  "file": "OBAR_BIDS11.lin",
+  "dealCount": 274
+ },
+ {
+  "name": "Ogust",
+  "file": "Ogust.lin",
+  "dealCount": 338
+ },
+ {
+  "name": "Open_In_Fourth_13",
+  "file": "Open_In_Fourth_13.lin",
+  "dealCount": 282
+ },
+ {
+  "name": "Open_In_Fourth_14",
+  "file": "Open_In_Fourth_14.lin",
+  "dealCount": 318
+ },
+ {
+  "name": "Open_In_Fourth_15",
+  "file": "Open_In_Fourth_15.lin",
+  "dealCount": 328
+ },
+ {
+  "name": "Open_In_Fourth_16",
+  "file": "Open_In_Fourth_16.lin",
+  "dealCount": 331
+ },
+ {
+  "name": "Open_In_Fourth_Seat",
+  "file": "Open_In_Fourth_Seat.lin",
+  "dealCount": 322
+ },
+ {
+  "name": "Opp_Redoubles",
+  "file": "Opp_Redoubles.lin",
+  "dealCount": 292
+ },
+ {
+  "name": "Opps_2-Suited_Overcalls",
+  "file": "Opps_2-Suited_Overcalls.lin",
+  "dealCount": 336
+ },
+ {
+  "name": "Opps_Bid_Over_GF_2C",
+  "file": "Opps_Bid_Over_GF_2C.lin",
+  "dealCount": 246
+ },
+ {
+  "name": "Opps_Double_1_NT",
+  "file": "Opps_Double_1_NT.lin",
+  "dealCount": 252
+ },
+ {
+  "name": "Opps_Double_Jacoby",
+  "file": "Opps_Double_Jacoby.lin",
+  "dealCount": 416
+ },
+ {
+  "name": "Opps_Double_Stayman",
+  "file": "Opps_Double_Stayman.lin",
+  "dealCount": 431
+ },
+ {
+  "name": "Opps_Gambling_3N",
+  "file": "Opps_Gambling_3N.lin",
+  "dealCount": 463
+ },
+ {
+  "name": "Opps_Michaels_Cuebid",
+  "file": "Opps_Michaels_Cuebid.lin",
+  "dealCount": 456
+ },
+ {
+  "name": "Opps_Michaels_and_Unusual",
+  "file": "Opps_Michaels_and_Unusual.lin",
+  "dealCount": 396
+ },
+ {
+  "name": "Opps_Multi_2D",
+  "file": "Opps_Multi_2D.lin",
+  "dealCount": 345
+ },
+ {
+  "name": "Opps_Open_1N_15-17",
+  "file": "Opps_Open_1N_15-17.lin",
+  "dealCount": 450
+ },
+ {
+  "name": "Opps_Overcall_1NT",
+  "file": "Opps_Overcall_1NT.lin",
+  "dealCount": 354
+ },
+ {
+  "name": "Opps_Overcall_Stayman_or_Jacoby",
+  "file": "Opps_Overcall_Stayman_or_Jacoby.lin",
+  "dealCount": 232
+ },
+ {
+  "name": "Opps_Preempt",
+  "file": "Opps_Preempt.lin",
+  "dealCount": 433
+ },
+ {
+  "name": "Opps_Preemptive_Overcall",
+  "file": "Opps_Preemptive_Overcall.lin",
+  "dealCount": 442
+ },
+ {
+  "name": "Opps_Takeout_X",
+  "file": "Opps_Takeout_X.lin",
+  "dealCount": 496
+ },
+ {
+  "name": "Opps_Takeout_X_We_XX",
+  "file": "Opps_Takeout_X_We_XX.lin",
+  "dealCount": 423
+ },
+ {
+  "name": "Opps_Weak_Two",
+  "file": "Opps_Weak_Two.lin",
+  "dealCount": 479
+ },
+ {
+  "name": "Play_Top_Tricks",
+  "file": "Play_Top_Tricks.lin",
+  "dealCount": 156
+ },
+ {
+  "name": "Play_Top_Tricks_NT",
+  "file": "Play_Top_Tricks_NT.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Play_Top_Tricks_Suit",
+  "file": "Play_Top_Tricks_Suit.lin",
+  "dealCount": 142
+ },
+ {
+  "name": "Power_Double_Balanced",
+  "file": "Power_Double_Balanced.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Power_Double_Unbalanced",
+  "file": "Power_Double_Unbalanced.lin",
+  "dealCount": 430
+ },
+ {
+  "name": "Preempt_X_XX",
+  "file": "Preempt_X_XX.lin",
+  "dealCount": 78
+ },
+ {
+  "name": "Preemptive_Raise",
+  "file": "Preemptive_Raise.lin",
+  "dealCount": 221
+ },
+ {
+  "name": "Preempts",
+  "file": "Preempts.lin",
+  "dealCount": 406
+ },
+ {
+  "name": "Puppet_Stayman_1N",
+  "file": "Puppet_Stayman_1N.lin",
+  "dealCount": 487
+ },
+ {
+  "name": "Puppet_Stayman_2N",
+  "file": "Puppet_Stayman_2N.lin",
+  "dealCount": 497
+ },
+ {
+  "name": "Rabbis_Rule",
+  "file": "Rabbis_Rule.lin",
+  "dealCount": 110
+ },
+ {
+  "name": "Responsive_Double",
+  "file": "Responsive_Double.lin",
+  "dealCount": 33
+ },
+ {
+  "name": "Responsive_Double_after_Overcall",
+  "file": "Responsive_Double_after_Overcall.lin",
+  "dealCount": 118
+ },
+ {
+  "name": "Reverse_After_Two_Over_One",
+  "file": "Reverse_After_Two_Over_One.lin",
+  "dealCount": 291
+ },
+ {
+  "name": "Reverse_By_Opener",
+  "file": "Reverse_By_Opener.lin",
+  "dealCount": 237
+ },
+ {
+  "name": "Reverse_By_Responder",
+  "file": "Reverse_By_Responder.lin",
+  "dealCount": 151
+ },
+ {
+  "name": "Reverse_Flannery",
+  "file": "Reverse_Flannery.lin",
+  "dealCount": 497
+ },
+ {
+  "name": "Robot_Free_Bid",
+  "file": "Robot_Free_Bid.lin",
+  "dealCount": 292
+ },
+ {
+  "name": "Rule_of_16-15",
+  "file": "Rule_of_16-15.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Rule_of_16-16",
+  "file": "Rule_of_16-16.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Rule_of_16-17",
+  "file": "Rule_of_16-17.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Rule_of_16-18",
+  "file": "Rule_of_16-18.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Rule_of_16",
+  "file": "Rule_of_16.lin",
+  "dealCount": 490
+ },
+ {
+  "name": "Rule_of_2",
+  "file": "Rule_of_2.lin",
+  "dealCount": 251
+ },
+ {
+  "name": "Runout_after_1N_X",
+  "file": "Runout_after_1N_X.lin",
+  "dealCount": 309
+ },
+ {
+  "name": "SCS16_1C_1SuitedOpnr",
+  "file": "SCS16_1C_1SuitedOpnr.lin",
+  "dealCount": 490
+ },
+ {
+  "name": "SCS16_1C_1SuitedResp",
+  "file": "SCS16_1C_1SuitedResp.lin",
+  "dealCount": 498
+ },
+ {
+  "name": "SCS16_1C_3-Suit_Resp",
+  "file": "SCS16_1C_3-Suit_Resp.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "SCS16_1C_3-Suit_Resp_5-7",
+  "file": "SCS16_1C_3-Suit_Resp_5-7.lin",
+  "dealCount": 498
+ },
+ {
+  "name": "SCS16_1C_54_Resp",
+  "file": "SCS16_1C_54_Resp.lin",
+  "dealCount": 498
+ },
+ {
+  "name": "SCS16_1C_55_Resp",
+  "file": "SCS16_1C_55_Resp.lin",
+  "dealCount": 498
+ },
+ {
+  "name": "SCS16_1C_any_0-4_Resp",
+  "file": "SCS16_1C_any_0-4_Resp.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "SCS16_1C_any_5-7_Resp",
+  "file": "SCS16_1C_any_5-7_Resp.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "SCS16_1C_any_8plus_Resp",
+  "file": "SCS16_1C_any_8plus_Resp.lin",
+  "dealCount": 499
+ },
+ {
+  "name": "SCS16_1or2C",
+  "file": "SCS16_1or2C.lin",
+  "dealCount": 471
+ },
+ {
+  "name": "SCS16_1or2_Clubs",
+  "file": "SCS16_1or2_Clubs.lin",
+  "dealCount": 198
+ },
+ {
+  "name": "SCS16_Major_Open_2-Suit_Resp",
+  "file": "SCS16_Major_Open_2-Suit_Resp.lin",
+  "dealCount": 492
+ },
+ {
+  "name": "SCS16_Major_with_2nd_Suit",
+  "file": "SCS16_Major_with_2nd_Suit.lin",
+  "dealCount": 361
+ },
+ {
+  "name": "SCS_1C_3-Suit_Resp",
+  "file": "SCS_1C_3-Suit_Resp.lin",
+  "dealCount": 322
+ },
+ {
+  "name": "SCS_1C_3-Suit_Resp_5-7",
+  "file": "SCS_1C_3-Suit_Resp_5-7.lin",
+  "dealCount": 357
+ },
+ {
+  "name": "SCS_1C_54_Resp",
+  "file": "SCS_1C_54_Resp.lin",
+  "dealCount": 317
+ },
+ {
+  "name": "SCS_1C_55_Resp",
+  "file": "SCS_1C_55_Resp.lin",
+  "dealCount": 320
+ },
+ {
+  "name": "SCS_1C_any_0-4_Resp",
+  "file": "SCS_1C_any_0-4_Resp.lin",
+  "dealCount": 370
+ },
+ {
+  "name": "SCS_1C_any_5-7_Resp",
+  "file": "SCS_1C_any_5-7_Resp.lin",
+  "dealCount": 345
+ },
+ {
+  "name": "SCS_1C_any_8plus_Resp",
+  "file": "SCS_1C_any_8plus_Resp.lin",
+  "dealCount": 324
+ },
+ {
+  "name": "SCS_Impossible_Negative",
+  "file": "SCS_Impossible_Negative.lin",
+  "dealCount": 374
+ },
+ {
+  "name": "SCS_Major_Open_2-Suit_Resp",
+  "file": "SCS_Major_Open_2-Suit_Resp.lin",
+  "dealCount": 487
+ },
+ {
+  "name": "SCS_Major_with_2nd_Suit",
+  "file": "SCS_Major_with_2nd_Suit.lin",
+  "dealCount": 360
+ },
+ {
+  "name": "SCS_Two_Clubs",
+  "file": "SCS_Two_Clubs.lin",
+  "dealCount": 236
+ },
+ {
+  "name": "Scrambling_2NT",
+  "file": "Scrambling_2NT.lin",
+  "dealCount": 67
+ },
+ {
+  "name": "Serious",
+  "file": "Serious.lin",
+  "dealCount": 186
+ },
+ {
+  "name": "Side_Suit_Ruff_Before_Trump",
+  "file": "Side_Suit_Ruff_Before_Trump.lin",
+  "dealCount": 335
+ },
+ {
+  "name": "Slam_After_Major_Fit",
+  "file": "Slam_After_Major_Fit.lin",
+  "dealCount": 473
+ },
+ {
+  "name": "Slam_after_NT",
+  "file": "Slam_after_NT.lin",
+  "dealCount": 413
+ },
+ {
+  "name": "Slam_after_Preempt",
+  "file": "Slam_after_Preempt.lin",
+  "dealCount": 450
+ },
+ {
+  "name": "Slam_after_Stayman",
+  "file": "Slam_after_Stayman.lin",
+  "dealCount": 398
+ },
+ {
+  "name": "Slam_after_Stayman_or_Jacoby_w30plus",
+  "file": "Slam_after_Stayman_or_Jacoby_w30plus.lin",
+  "dealCount": 414
+ },
+ {
+  "name": "Slam_after_Stayman_or_Jacoby_w31plus",
+  "file": "Slam_after_Stayman_or_Jacoby_w31plus.lin",
+  "dealCount": 421
+ },
+ {
+  "name": "Slam_after_Transfer",
+  "file": "Slam_after_Transfer.lin",
+  "dealCount": 458
+ },
+ {
+  "name": "Smolen",
+  "file": "Smolen.lin",
+  "dealCount": 488
+ },
+ {
+  "name": "Smolen_Invitational",
+  "file": "Smolen_Invitational.lin",
+  "dealCount": 401
+ },
+ {
+  "name": "Smolen_after_2N",
+  "file": "Smolen_after_2N.lin",
+  "dealCount": 490
+ },
+ {
+  "name": "Snapdragon_Double",
+  "file": "Snapdragon_Double.lin",
+  "dealCount": 55
+ },
+ {
+  "name": "Soloway_Jump_Shift",
+  "file": "Soloway_Jump_Shift.lin",
+  "dealCount": 327
+ },
+ {
+  "name": "Soloway_Jump_Shift_Type-1",
+  "file": "Soloway_Jump_Shift_Type-1.lin",
+  "dealCount": 427
+ },
+ {
+  "name": "Soloway_Jump_Shift_Type-2",
+  "file": "Soloway_Jump_Shift_Type-2.lin",
+  "dealCount": 378
+ },
+ {
+  "name": "Soloway_Jump_Shift_Type-3",
+  "file": "Soloway_Jump_Shift_Type-3.lin",
+  "dealCount": 197
+ },
+ {
+  "name": "Soloway_Jump_Shift_Type-4",
+  "file": "Soloway_Jump_Shift_Type-4.lin",
+  "dealCount": 168
+ },
+ {
+  "name": "Spear",
+  "file": "Spear.lin",
+  "dealCount": 353
+ },
+ {
+  "name": "Spiral_Raise",
+  "file": "Spiral_Raise.lin",
+  "dealCount": 180
+ },
+ {
+  "name": "Splinters",
+  "file": "Splinters.lin",
+  "dealCount": 340
+ },
+ {
+  "name": "Splinters_By_Opener",
+  "file": "Splinters_By_Opener.lin",
+  "dealCount": 137
+ },
+ {
+  "name": "Splinters_after_Minor",
+  "file": "Splinters_after_Minor.lin",
+  "dealCount": 133
+ },
+ {
+  "name": "Stayman",
+  "file": "Stayman.lin",
+  "dealCount": 477
+ },
+ {
+  "name": "Suction",
+  "file": "Suction.lin",
+  "dealCount": 460
+ },
+ {
+  "name": "Suit_Promotion",
+  "file": "Suit_Promotion.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "SupportX_by_Advancer",
+  "file": "SupportX_by_Advancer.lin",
+  "dealCount": 212
+ },
+ {
+  "name": "Support_Double",
+  "file": "Support_Double.lin",
+  "dealCount": 291
+ },
+ {
+  "name": "TEST",
+  "file": "TEST.lin",
+  "dealCount": 480
+ },
+ {
+  "name": "Takeout_Double",
+  "file": "Takeout_Double.lin",
+  "dealCount": 258
+ },
+ {
+  "name": "Texas_Transfer",
+  "file": "Texas_Transfer.lin",
+  "dealCount": 350
+ },
+ {
+  "name": "Texas_or_Jacoby",
+  "file": "Texas_or_Jacoby.lin",
+  "dealCount": 479
+ },
+ {
+  "name": "To_Finesse_Or_Not_To_Finesse",
+  "file": "To_Finesse_Or_Not_To_Finesse.lin",
+  "dealCount": 160
+ },
+ {
+  "name": "Too_Strong_for_Overcall",
+  "file": "Too_Strong_for_Overcall.lin",
+  "dealCount": 478
+ },
+ {
+  "name": "Too_Strong_for_Overcall4th",
+  "file": "Too_Strong_for_Overcall4th.lin",
+  "dealCount": 234
+ },
+ {
+  "name": "Transfer_Walsh",
+  "file": "Transfer_Walsh.lin",
+  "dealCount": 388
+ },
+ {
+  "name": "Transfers_after_1M_X",
+  "file": "Transfers_after_1M_X.lin",
+  "dealCount": 488
+ },
+ {
+  "name": "Trap_Pass",
+  "file": "Trap_Pass.lin",
+  "dealCount": 180
+ },
+ {
+  "name": "Trap_Pass_Maybe",
+  "file": "Trap_Pass_Maybe.lin",
+  "dealCount": 134
+ },
+ {
+  "name": "Trap_Pass_Opener",
+  "file": "Trap_Pass_Opener.lin",
+  "dealCount": 287
+ },
+ {
+  "name": "Trap_Pass_Opener_Maybe",
+  "file": "Trap_Pass_Opener_Maybe.lin",
+  "dealCount": 309
+ },
+ {
+  "name": "Two-Suited_Overcalls",
+  "file": "Two-Suited_Overcalls.lin",
+  "dealCount": 342
+ },
+ {
+  "name": "Two-Way_Game_Try",
+  "file": "Two-Way_Game_Try.lin",
+  "dealCount": 186
+ },
+ {
+  "name": "Two-Way_New_Minor_Forcing_aka_xyNT",
+  "file": "Two-Way_New_Minor_Forcing_aka_xyNT.lin",
+  "dealCount": 220
+ },
+ {
+  "name": "Two_NT_in_Fourth_Seat",
+  "file": "Two_NT_in_Fourth_Seat.lin",
+  "dealCount": 416
+ },
+ {
+  "name": "Two_Notrump",
+  "file": "Two_Notrump.lin",
+  "dealCount": 485
+ },
+ {
+  "name": "Two_Over_One",
+  "file": "Two_Over_One.lin",
+  "dealCount": 477
+ },
+ {
+  "name": "Two_Way_Finesse",
+  "file": "Two_Way_Finesse.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Unusual_2N",
+  "file": "Unusual_2N.lin",
+  "dealCount": 458
+ },
+ {
+  "name": "Vics_2C_Relay",
+  "file": "Vics_2C_Relay.lin",
+  "dealCount": 484
+ },
+ {
+  "name": "Vics_Bal_Resp_to_1m",
+  "file": "Vics_Bal_Resp_to_1m.lin",
+  "dealCount": 116
+ },
+ {
+  "name": "W2_X_XX",
+  "file": "W2_X_XX.lin",
+  "dealCount": 257
+ },
+ {
+  "name": "WB5_Collante",
+  "file": "WB5_Collante.lin",
+  "dealCount": 403
+ },
+ {
+  "name": "WB5_Rodrigue",
+  "file": "WB5_Rodrigue.lin",
+  "dealCount": 350
+ },
+ {
+  "name": "WB5_Roudi",
+  "file": "WB5_Roudi.lin",
+  "dealCount": 105
+ },
+ {
+  "name": "We_Overcall",
+  "file": "We_Overcall.lin",
+  "dealCount": 358
+ },
+ {
+  "name": "We_Overcall_1N",
+  "file": "We_Overcall_1N.lin",
+  "dealCount": 303
+ },
+ {
+  "name": "We_Overcall_NT_then_Jacoby",
+  "file": "We_Overcall_NT_then_Jacoby.lin",
+  "dealCount": 187
+ },
+ {
+  "name": "We_Overcall_NT_then_MSS",
+  "file": "We_Overcall_NT_then_MSS.lin",
+  "dealCount": 133
+ },
+ {
+  "name": "We_Overcall_NT_then_MST",
+  "file": "We_Overcall_NT_then_MST.lin",
+  "dealCount": 123
+ },
+ {
+  "name": "We_Overcall_NT_then_Smolen",
+  "file": "We_Overcall_NT_then_Smolen.lin",
+  "dealCount": 262
+ },
+ {
+  "name": "We_Overcall_NT_then_Stayman",
+  "file": "We_Overcall_NT_then_Stayman.lin",
+  "dealCount": 165
+ },
+ {
+  "name": "We_Overcall_NT_then_Texas",
+  "file": "We_Overcall_NT_then_Texas.lin",
+  "dealCount": 135
+ },
+ {
+  "name": "We_Overcall_Their_2C",
+  "file": "We_Overcall_Their_2C.lin",
+  "dealCount": 181
+ },
+ {
+  "name": "We_X_Opps_Preempt",
+  "file": "We_X_Opps_Preempt.lin",
+  "dealCount": 254
+ },
+ {
+  "name": "We_X_Opps_Weak_2",
+  "file": "We_X_Opps_Weak_2.lin",
+  "dealCount": 402
+ },
+ {
+  "name": "Weak_2_Bids",
+  "file": "Weak_2_Bids.lin",
+  "dealCount": 451
+ },
+ {
+  "name": "Weak_2_Bids_Lax",
+  "file": "Weak_2_Bids_Lax.lin",
+  "dealCount": 422
+ },
+ {
+  "name": "Weak_2_Bids_Lax_Leveled",
+  "file": "Weak_2_Bids_Lax_Leveled.lin",
+  "dealCount": 412
+ },
+ {
+  "name": "Weak_2_Bids_Leveled",
+  "file": "Weak_2_Bids_Leveled.lin",
+  "dealCount": 449
+ },
+ {
+  "name": "Weak_Jump_Shift",
+  "file": "Weak_Jump_Shift.lin",
+  "dealCount": 379
+ },
+ {
+  "name": "Weak_NT_13-15",
+  "file": "Weak_NT_13-15.lin",
+  "dealCount": 500
+ },
+ {
+  "name": "Weak_NT_14-15",
+  "file": "Weak_NT_14-15.lin",
+  "dealCount": 334
+ },
+ {
+  "name": "XYZ",
+  "file": "XYZ.lin",
+  "dealCount": 382
+ },
+ {
+  "name": "Xfer_after_1M_X",
+  "file": "Xfer_after_1M_X.lin",
+  "dealCount": 287
+ },
+ {
+  "name": "losers",
+  "file": "losers.lin",
+  "dealCount": 500
+ }
+]
