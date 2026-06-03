@@ -148,13 +148,26 @@ $("upload").addEventListener("click", async () => {
         "No BBO tab found. Open https://www.bridgebase.com/v3/ and log in, then try again."
       );
     }
+    // Prefer the active/most recently used tab; try each until one has the
+    // content script loaded (tabs opened before install won't have it).
+    tabs.sort((a, b) => (b.active - a.active) || (b.lastAccessed || 0) - (a.lastAccessed || 0));
     setStatus(`Uploading ${total} deals as "${name}"…`);
-    const result = await chrome.tabs.sendMessage(tabs[0].id, {
-      type: "pbs-upload",
-      folderName: name,
-      fileName: name + ".lin",
-      content,
-    });
+    let result, lastErr;
+    for (const tab of tabs) {
+      try {
+        result = await chrome.tabs.sendMessage(tab.id, {
+          type: "pbs-upload",
+          folderName: name,
+          fileName: name + ".lin",
+          content,
+        });
+        lastErr = null;
+        break;
+      } catch (e) {
+        lastErr = e;
+      }
+    }
+    if (lastErr) throw lastErr;
     if (result && result.ok) {
       setStatus(`Done! Folder "${name}" created in your Deal archive.\n(${summary})\n${result.message || ""}`, "ok");
     } else {
