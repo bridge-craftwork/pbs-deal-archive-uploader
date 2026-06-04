@@ -51,11 +51,17 @@ def parse_pbn(text):
 
 
 def hand_to_lin(hand):
-    """'A63.QJ92.AT2.A83' -> 'SA63HQJ92DAT2CA83' (void suit omitted entirely)."""
+    """'A63.QJ92.AT2.A83' -> 'SA63HQJ92DAT2CA83'.
+
+    All four suit letters are always emitted, even for a void (bare letter).
+    bridge-wrangler omits the letter for voids, but BBO's Deal archive
+    uploader silently rejects such deals (observed 2026-06-03), while BBO's
+    own LIN exports always include all four letters.
+    """
     suits = hand.split(".")
     if len(suits) != 4:
         raise ValueError(f"Bad hand: {hand!r}")
-    return "".join(letter + cards for letter, cards in zip("SHDC", suits) if cards)
+    return "".join(letter + cards for letter, cards in zip("SHDC", suits))
 
 
 def deal_to_hands(deal):

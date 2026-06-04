@@ -189,6 +189,17 @@ chrome.runtime.onMessage.addListener((msg) => {
   if (msg && msg.type === "pbs-progress") setStatus(msg.text);
 });
 
+$("refresh").addEventListener("click", async (ev) => {
+  ev.preventDefault();
+  setStatus("Clearing cached scenario data…");
+  const all = await chrome.storage.local.get(null);
+  const keys = Object.keys(all).filter((k) => k === "index" || k === "indexAt" || k.startsWith("lin:"));
+  await chrome.storage.local.remove(keys);
+  index = await loadIndex();
+  renderList();
+  setStatus("Scenario data refreshed.", "ok");
+});
+
 $("search").addEventListener("input", renderList);
 document.querySelectorAll("input[name=mode]").forEach((r) =>
   r.addEventListener("change", () => {
