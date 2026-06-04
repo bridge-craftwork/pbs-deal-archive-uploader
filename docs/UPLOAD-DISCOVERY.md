@@ -3,6 +3,24 @@
 Findings from a live session in the BBO v3 web app (`www.bridgebase.com/v3/`),
 confirmed with a successful 2-board test upload.
 
+**Update, same day:** the full extension flow (create folder → rename →
+select → import) is confirmed working end-to-end: 24 deals from 3 scenarios
+uploaded into auto-created folder `PBS-260603-20-06-3-scenarios`.
+Debugging lessons learned along the way:
+
+- Folder/deal names render in `<p>` leaf elements — text searches limited to
+  div/span/a/button miss them entirely.
+- The rename row's commit control is `done.svg` (plus `delete.svg` to discard);
+  clicking it is more reliable than synthesizing Enter.
+- The rename input is `input[type=text]` prefilled "Untitled folder"; set its
+  value via the native setter + `input` event (Angular won't see plain
+  assignment).
+- Refreshing the extension does NOT replace content scripts in already-open
+  tabs — the BBO tab must be reloaded after every extension update, or you'll
+  debug stale code.
+- Failed runs leave empty "Untitled folder" rows; create-folder logic counts
+  them before clicking add and targets the newest afterward.
+
 ## Where the Deal archive lives
 
 - Right-side panel → **Account** tab → **Deal archive** sub-tab.

@@ -45,4 +45,8 @@ Users get the new scenario list automatically (the extension caches it for 1 hou
 
 ## Status
 
-Working end-to-end in development. Not yet on the Chrome Web Store.
+Working end-to-end (verified 2026-06-03: 24 deals from 3 scenarios uploaded
+into an auto-created `PBS-…` folder). Not yet on the Chrome Web Store.
+
+Remaining before public release: second-account test, large-file (100+ board)
+test, store listing assets, privacy policy, BBO ToS check.
