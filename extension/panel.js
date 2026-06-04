@@ -134,7 +134,8 @@ async function buildContent() {
     scenarios.push({ name, lines: await fetchScenarioLines(entry) });
   }
   const { lines, perScenario } = buildLin(scenarios, total, mode, start, Math.random, rotation);
-  const name = uploadName(names, total, rotation);
+  const custom = $("customName").value.trim();
+  const name = custom || uploadName(names, total, rotation);
   const summary = Object.entries(perScenario)
     .map(([k, v]) => `${k}: ${v}`)
     .join(", ");
