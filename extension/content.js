@@ -34,10 +34,14 @@
 
   const visible = (e) => e && e.offsetWidth > 0 && e.offsetHeight > 0;
 
-  function leafByText(text, root = document) {
-    return [...root.querySelectorAll("p,div,span,a,button,td,li,ion-label")].find(
+  function leavesByText(text, root = document) {
+    return [...root.querySelectorAll("p,div,span,a,button,td,li,ion-label")].filter(
       (e) => e.children.length === 0 && e.textContent.trim() === text && visible(e)
     );
+  }
+
+  function leafByText(text, root = document) {
+    return leavesByText(text, root)[0];
   }
 
   function folderPanel() {
@@ -71,9 +75,15 @@
     if (!heading) throw new Error("Deal archive folder list not found.");
     const add = heading.querySelector('img[src*="add"]');
     if (!add) throw new Error("Add-folder button not found.");
+    // How many "Untitled folder" rows already exist (from prior aborted runs)?
+    const before = leavesByText("Untitled folder", panel).length;
     add.click();
 
-    const untitled = await waitFor(() => leafByText("Untitled folder", folderPanel()), 8000);
+    // Wait until a NEW untitled folder appears, then operate on the last one.
+    const untitled = await waitFor(() => {
+      const all = leavesByText("Untitled folder", folderPanel());
+      return all.length > before ? all[all.length - 1] : null;
+    }, 8000);
 
     progress(`Naming folder "${name}"…`);
     // find the row's edit icon
