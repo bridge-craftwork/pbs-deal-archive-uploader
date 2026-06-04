@@ -151,6 +151,8 @@ $("upload").addEventListener("click", async () => {
     // Prefer the active/most recently used tab; try each until one has the
     // content script loaded (tabs opened before install won't have it).
     tabs.sort((a, b) => (b.active - a.active) || (b.lastAccessed || 0) - (a.lastAccessed || 0));
+    // keep a copy of exactly what we upload, for diagnosing rejects
+    await chrome.storage.local.set({ lastUploadName: name, lastUploadContent: content });
     setStatus(`Uploading ${total} deals as "${name}"…`);
     let result, lastErr;
     for (const tab of tabs) {
@@ -198,6 +200,22 @@ $("refresh").addEventListener("click", async (ev) => {
   index = await loadIndex();
   renderList();
   setStatus("Scenario data refreshed.", "ok");
+});
+
+$("downloadLast").addEventListener("click", async (ev) => {
+  ev.preventDefault();
+  const s = await chrome.storage.local.get(["lastUploadName", "lastUploadContent"]);
+  if (!s.lastUploadContent) {
+    setStatus("No previous upload stored.", "err");
+    return;
+  }
+  const url = URL.createObjectURL(new Blob([s.lastUploadContent], { type: "text/plain" }));
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = (s.lastUploadName || "last-upload") + ".lin";
+  a.click();
+  URL.revokeObjectURL(url);
+  setStatus(`Downloaded ${s.lastUploadName}.lin (exact copy of last upload).`, "ok");
 });
 
 $("search").addEventListener("input", renderList);
