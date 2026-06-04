@@ -50,8 +50,7 @@ async function fetchScenarioLines(entry) {
 function renderList() {
   const filter = $("search").value.trim().toLowerCase();
   listEl.textContent = "";
-  for (const s of index) {
-    if (filter && !s.name.toLowerCase().includes(filter)) continue;
+  const addRow = (s) => {
     const label = document.createElement("label");
     const cb = document.createElement("input");
     cb.type = "checkbox";
@@ -60,6 +59,7 @@ function renderList() {
     cb.addEventListener("change", () => {
       cb.checked ? selected.add(s.name) : selected.delete(s.name);
       updateSummary();
+      renderList(); // regroup: selected scenarios stay pinned at the top
     });
     const span = document.createElement("span");
     span.textContent = s.name.replace(/_/g, " ");
@@ -68,7 +68,19 @@ function renderList() {
     count.textContent = s.dealCount;
     label.append(cb, span, count);
     listEl.append(label);
+  };
+  // selected scenarios first (always visible, regardless of filter)
+  const sel = index.filter((s) => selected.has(s.name));
+  const rest = index.filter(
+    (s) => !selected.has(s.name) && (!filter || s.name.toLowerCase().includes(filter))
+  );
+  sel.forEach(addRow);
+  if (sel.length && rest.length) {
+    const hr = document.createElement("div");
+    hr.style.cssText = "border-top:1px solid #ccc; margin:4px 0;";
+    listEl.append(hr);
   }
+  rest.forEach(addRow);
 }
 
 const selected = new Set();
