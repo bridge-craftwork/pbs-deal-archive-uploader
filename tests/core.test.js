@@ -5,6 +5,8 @@ import {
   selectDeals,
   shuffle,
   restamp,
+  rotateLin,
+  rotationForBoard,
   buildLin,
   uploadName,
 } from "../extension/core.js";
@@ -93,12 +95,52 @@ test("buildLin single scenario keeps order (no shuffle), still renumbers", () =>
   assert.equal(lines.length, 5);
 });
 
-test("uploadName formats PBS-yymmdd-hh-mm-suffix", () => {
+test("uploadName: 'PBS yy/mm/dd hh:mm <suffix> Rn Dnn'", () => {
   const d = new Date(2026, 5, 3, 14, 30); // 2026-06-03 14:30
-  assert.equal(uploadName(["1N"], d), "PBS-260603-14-30-1N");
-  assert.equal(uploadName(["1N", "Smolen"], d), "PBS-260603-14-30-1N+Smolen");
-  assert.equal(uploadName(["a", "b", "c", "d"], d), "PBS-260603-14-30-4-scenarios");
-  // sanitizes and caps at 40 chars
-  const long = uploadName(["Gavin_Passed_Hand_Response_Structure"], d);
+  assert.equal(uploadName(["Smolen"], 12, 1, d), "PBS 26/06/03 14:30 Smolen R1 D12");
+  assert.equal(uploadName(["a", "b", "c"], 24, 4, d), "PBS 26/06/03 14:30 S3 R4 D24");
+  assert.equal(uploadName(["1N", "Drury"], 16, 2, d), "PBS 26/06/03 14:30 S2 R2 D16");
+  const long = uploadName(["Gavin_Passed_Hand_Response_Structure"], 24, 4, d);
   assert.ok(long.length <= 40);
+  assert.ok(long.endsWith(" R4 D24"));
+});
+
+const VOID_LINE =
+  "qx|o1|md|3SK64HKJ865DAK2CK3,SQ85HAQ97DJ85CAT7,SHT32DQT7643CQ864|sv|n|rh||ah|Board 1|pg||";
+
+test("rotateLin 180: S<->N, computed East lands in West, dealer follows", () => {
+  const out = rotateLin(VOID_LINE, 2);
+  const md = /md\|(\d)([^|]*)\|/.exec(out);
+  assert.equal(md[1], "1"); // dealer N (3) -> S (1)
+  const [s, w, n] = md[2].split(",");
+  assert.equal(s, "SHT32DQT7643CQ864"); // old North (with spade void) now South
+  assert.equal(n, "SK64HKJ865DAK2CK3"); // old South now North
+  assert.equal(w, "SAJT9732H4D9CJ952"); // old East (computed from the other three)
+  assert.ok(out.includes("|sv|n|")); // 180° keeps NS/EW vul
+});
+
+test("rotateLin 90: vul swaps NS<->EW, k=0 identity, 4x90 = identity", () => {
+  const line =
+    "qx|o1|md|1SA63HQJ92DAT2CA83,SKJ5HKT6DKQ7CQT74,ST82HA843D43CK952|sv|e|rh||ah|Board 1|pg||";
+  assert.equal(rotateLin(line, 0), line);
+  const r1 = rotateLin(line, 1);
+  assert.ok(r1.includes("|sv|n|")); // EW -> NS
+  // rotating four times by 90° returns the original
+  let x = line;
+  for (let i = 0; i < 4; i++) x = rotateLin(x, 1);
+  assert.equal(x, line);
+});
+
+test("rotationForBoard patterns", () => {
+  assert.deepEqual([0, 1, 2, 3].map((i) => rotationForBoard(1, i)), [0, 0, 0, 0]);
+  assert.deepEqual([0, 1, 2, 3].map((i) => rotationForBoard(2, i)), [0, 2, 0, 2]);
+  assert.deepEqual([0, 1, 2, 3, 4].map((i) => rotationForBoard(4, i)), [0, 1, 2, 3, 0]);
+});
+
+test("buildLin applies rotation per board", () => {
+  const scenarios = [{ name: "A", lines: mkLines("A", 10) }];
+  const { lines } = buildLin(scenarios, 4, "seq", 1, seeded(), 2);
+  // source deals all have dealer 1 (South); boards 2 and 4 rotated 180 -> dealer 3 (North)
+  const dealers = lines.map((l) => /md\|(\d)/.exec(l)[1]);
+  assert.deepEqual(dealers, ["1", "3", "1", "3"]);
 });

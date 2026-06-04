@@ -94,13 +94,19 @@ function updateSummary() {
 }
 
 async function restoreSettings() {
-  const s = await chrome.storage.local.get(["lastSelected", "lastTotal", "lastMode", "lastStart"]);
+  const s = await chrome.storage.local.get([
+    "lastSelected", "lastTotal", "lastMode", "lastStart", "lastRotation",
+  ]);
   (s.lastSelected || []).forEach((n) => selected.add(n));
   if (s.lastTotal) $("total").value = s.lastTotal;
   if (s.lastStart) $("start").value = s.lastStart;
   if (s.lastMode === "seq") {
     document.querySelector('input[name=mode][value=seq]').checked = true;
     $("start").disabled = false;
+  }
+  if (s.lastRotation) {
+    const r = document.querySelector(`input[name=rot][value="${s.lastRotation}"]`);
+    if (r) r.checked = true;
   }
 }
 
@@ -111,12 +117,15 @@ function currentConfig() {
   if (!(total >= 1)) throw new Error("Total deals must be at least 1.");
   const mode = document.querySelector("input[name=mode]:checked").value;
   const start = parseInt($("start").value, 10) || 1;
-  chrome.storage.local.set({ lastTotal: total, lastMode: mode, lastStart: start });
-  return { names, total, mode, start };
+  const rotation = parseInt(document.querySelector("input[name=rot]:checked").value, 10);
+  chrome.storage.local.set({
+    lastTotal: total, lastMode: mode, lastStart: start, lastRotation: rotation,
+  });
+  return { names, total, mode, start, rotation };
 }
 
 async function buildContent() {
-  const { names, total, mode, start } = currentConfig();
+  const { names, total, mode, start, rotation } = currentConfig();
   setStatus("Fetching scenario deals…");
   const scenarios = [];
   for (const name of names) {
@@ -124,13 +133,16 @@ async function buildContent() {
     if (!entry) throw new Error(`scenario ${name} not in index`);
     scenarios.push({ name, lines: await fetchScenarioLines(entry) });
   }
-  const { lines, perScenario } = buildLin(scenarios, total, mode, start);
-  const name = uploadName(names);
+  const { lines, perScenario } = buildLin(scenarios, total, mode, start, Math.random, rotation);
+  const name = uploadName(names, total, rotation);
   const summary = Object.entries(perScenario)
     .map(([k, v]) => `${k}: ${v}`)
     .join(", ");
   return { name, content: lines.join("\n") + "\n", summary, total };
 }
+
+// folder names contain "/", ":" and spaces — make a filesystem-safe filename
+const safeFileName = (name) => name.replace(/[/:]/g, "-").replace(/ /g, "_");
 
 // ---------- actions ----------
 $("download").addEventListener("click", async () => {
@@ -139,7 +151,7 @@ $("download").addEventListener("click", async () => {
     const url = URL.createObjectURL(new Blob([content], { type: "text/plain" }));
     const a = document.createElement("a");
     a.href = url;
-    a.download = name + ".lin";
+    a.download = safeFileName(name) + ".lin";
     a.click();
     URL.revokeObjectURL(url);
     setStatus(`Downloaded ${name}.lin\n(${summary})`, "ok");
@@ -172,7 +184,7 @@ $("upload").addEventListener("click", async () => {
         result = await chrome.tabs.sendMessage(tab.id, {
           type: "pbs-upload",
           folderName: name,
-          fileName: name + ".lin",
+          fileName: safeFileName(name) + ".lin",
           content,
         });
         lastErr = null;
@@ -224,7 +236,7 @@ $("downloadLast").addEventListener("click", async (ev) => {
   const url = URL.createObjectURL(new Blob([s.lastUploadContent], { type: "text/plain" }));
   const a = document.createElement("a");
   a.href = url;
-  a.download = (s.lastUploadName || "last-upload") + ".lin";
+  a.download = safeFileName(s.lastUploadName || "last-upload") + ".lin";
   a.click();
   URL.revokeObjectURL(url);
   setStatus(`Downloaded ${s.lastUploadName}.lin (exact copy of last upload).`, "ok");

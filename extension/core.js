@@ -58,12 +58,70 @@ export function restamp(line, n) {
     .replace(/ah\|Board \d+\|/, `ah|Board ${n}|`);
 }
 
+// ---------- rotation ----------
+
+const RANKS = "AKQJT98765432";
+const SEATS_CW = ["N", "E", "S", "W"]; // clockwise around the table
+const DIGIT_TO_SEAT = { 1: "S", 2: "W", 3: "N", 4: "E" };
+const SEAT_TO_DIGIT = { S: "1", W: "2", N: "3", E: "4" };
+
+function parseHand(h) {
+  const m = /^S([^HDC]*)H([^SDC]*)D([^SHC]*)C([^SHD]*)$/.exec(h);
+  if (!m) throw new Error("bad LIN hand: " + h);
+  return { S: m[1], H: m[2], D: m[3], C: m[4] };
+}
+
+const handStr = (o) => `S${o.S}H${o.H}D${o.D}C${o.C}`;
+
+/**
+ * Rotate a LIN deal by k seats clockwise (k = 0..3). Hands, dealer, and
+ * vulnerability all rotate together, so the scenario hand keeps its
+ * relationship to the dealer — only which player holds it changes.
+ */
+export function rotateLin(line, k) {
+  k = ((k % 4) + 4) % 4;
+  if (k === 0) return line;
+  const m = /md\|(\d)([^|]*)\|/.exec(line);
+  if (!m) throw new Error("no md in LIN line");
+  const [sH, wH, nH] = m[2].split(",").map(parseHand);
+  const east = {};
+  for (const suit of "SHDC") {
+    const used = new Set((sH[suit] + wH[suit] + nH[suit]).split(""));
+    east[suit] = [...RANKS].filter((r) => !used.has(r)).join("");
+  }
+  const hands = { S: sH, W: wH, N: nH, E: east };
+  const rotated = {};
+  for (const seat of SEATS_CW) {
+    const to = SEATS_CW[(SEATS_CW.indexOf(seat) + k) % 4];
+    rotated[to] = hands[seat];
+  }
+  const oldDealer = DIGIT_TO_SEAT[m[1]];
+  const newDealer = SEATS_CW[(SEATS_CW.indexOf(oldDealer) + k) % 4];
+  const newMd =
+    SEAT_TO_DIGIT[newDealer] + [rotated.S, rotated.W, rotated.N].map(handStr).join(",");
+  let out = line.replace(/md\|\d[^|]*\|/, `md|${newMd}|`);
+  if (k % 2 === 1) {
+    out = out.replace(/sv\|([oneb])\|/, (_, v) =>
+      `sv|${v === "n" ? "e" : v === "e" ? "n" : v}|`
+    );
+  }
+  return out;
+}
+
+/** Per-board rotation amount for a rotation setting of 1, 2, or 4 players. */
+export function rotationForBoard(rotation, boardIndex) {
+  if (rotation === 4) return boardIndex % 4; // 90° steps: everyone gets a turn
+  if (rotation === 2) return (boardIndex % 2) * 2; // alternate 180°
+  return 0; // no rotation
+}
+
 /**
  * Build the final mixed LIN content.
  * scenarios: [{ name, lines }] — lines are that scenario's full LIN lines.
+ * rotation: 1 (none), 2 (alternate 180°), 4 (cycle 90°).
  * Returns { lines, perScenario: {name: count} }.
  */
-export function buildLin(scenarios, total, mode, start = 1, rng = Math.random) {
+export function buildLin(scenarios, total, mode, start = 1, rng = Math.random, rotation = 1) {
   if (!scenarios.length) throw new Error("no scenarios selected");
   if (total < 1) throw new Error("deal count must be at least 1");
   const counts = splitCounts(total, scenarios.length);
@@ -74,23 +132,31 @@ export function buildLin(scenarios, total, mode, start = 1, rng = Math.random) {
     if (counts[i] > 0) picked = picked.concat(selectDeals(s.lines, counts[i], mode, start, rng));
   });
   if (scenarios.length > 1) shuffle(picked, rng);
-  return { lines: picked.map((l, i) => restamp(l, i + 1)), perScenario };
+  return {
+    lines: picked.map((l, i) => restamp(rotateLin(l, rotationForBoard(rotation, i)), i + 1)),
+    perScenario,
+  };
 }
 
 /**
- * Folder/file name: PBS-yymmdd-hh-mm-<suffix>, suffix derived from
- * scenario names (1 name: the name; 2: A+B; >2: "<n>-scenarios").
+ * Folder name: "PBS yy/mm/dd hh:mm <Snn|ScenarioName> Rn Dnn"
+ * - Snn for multiple scenarios (nn = how many); the scenario name for one
+ * - Rn = rotation setting (1, 2, or 4)
+ * - Dnn = number of deals
  */
-export function uploadName(names, date = new Date()) {
+export function uploadName(names, total, rotation, date = new Date()) {
   const p = (x) => String(x).padStart(2, "0");
-  const stamp = `PBS-${String(date.getFullYear()).slice(2)}${p(date.getMonth() + 1)}${p(
+  const stamp = `PBS ${String(date.getFullYear()).slice(2)}/${p(date.getMonth() + 1)}/${p(
     date.getDate()
-  )}-${p(date.getHours())}-${p(date.getMinutes())}`;
-  let suffix;
-  if (names.length === 1) suffix = names[0];
-  else if (names.length === 2) suffix = `${names[0]}+${names[1]}`;
-  else suffix = `${names.length}-scenarios`;
-  suffix = suffix.replace(/[^A-Za-z0-9_+-]/g, "_");
-  const full = `${stamp}-${suffix}`;
-  return full.length > 40 ? full.slice(0, 40) : full;
+  )} ${p(date.getHours())}:${p(date.getMinutes())}`;
+  const tail = ` R${rotation} D${total}`;
+  let suffix =
+    names.length === 1 ? names[0].replace(/[^A-Za-z0-9_+-]/g, "_") : `S${names.length}`;
+  let full = `${stamp} ${suffix}${tail}`;
+  if (full.length > 40) {
+    const avail = 40 - stamp.length - 1 - tail.length;
+    suffix = suffix.slice(0, Math.max(3, avail));
+    full = `${stamp} ${suffix}${tail}`;
+  }
+  return full;
 }
