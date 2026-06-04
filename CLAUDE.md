@@ -57,6 +57,14 @@ confirmation. No tokens are handled; everything rides the user's session.
   2026-06-03: boards with voids vanished from the uploaded folder), even
   though bridge-wrangler omits letters for voids and the handviewer accepts
   either form. ~16% of all deals contain a void in a listed hand.
+  **Verified 2026-06-03**: a void deal in bare-letter form (e.g.
+  `...,SH1032DQ107643CQ864` for a spade void) uploads and appears in the
+  folder; the omitted-letter form is silently dropped. The "N games uploaded"
+  success message prints even when boards are dropped — never trust it; count
+  the boards that actually land. The extension caches scenario LINs for 1 hour,
+  so after a data rebuild users must click "Refresh scenario data" in the panel
+  (clears index + lin: keys) or wait out the TTL — otherwise they re-test
+  against stale data and the "fix" appears not to work.
 
 ## Development workflow
 
