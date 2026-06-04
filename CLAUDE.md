@@ -51,9 +51,12 @@ confirmation. No tokens are handled; everything rides the user's session.
   (cross-origin; not used directly).
 - Deal counts: see `scenarios/index.json` (5–500 per scenario, median ~394).
 - LIN format details and the PBN→LIN mapping are in `tools/pbn_to_lin.py`
-  (validated token-for-token against bridge-wrangler `to-lin`; void suits omit
-  the suit letter; dealer digit 1=S 2=W 3=N 4=E; hands listed S,W,N, East
-  omitted; sv o/n/e/b).
+  (dealer digit 1=S 2=W 3=N 4=E; hands listed S,W,N, East omitted; sv o/n/e/b).
+  **All four suit letters are always emitted, even for voids** — the BBO
+  uploader silently rejects hands with a missing suit letter (observed
+  2026-06-03: boards with voids vanished from the uploaded folder), even
+  though bridge-wrangler omits letters for voids and the handviewer accepts
+  either form. ~16% of all deals contain a void in a listed hand.
 
 ## Development workflow
 
