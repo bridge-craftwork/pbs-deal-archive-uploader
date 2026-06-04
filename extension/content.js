@@ -96,12 +96,17 @@
     if (!edit) throw new Error("Rename (edit) icon not found on new folder.");
     edit.click();
 
+    // The rename box is the visible text input inside the folder panel.
+    // Match by the input's actual `type` property (BBO may omit the attribute),
+    // and don't depend on its current value.
     const input = await waitFor(() => {
-      const ins = [...document.querySelectorAll("input[type=text]")].filter(
-        (e) => visible(e) && e.value === "Untitled folder"
+      const panelNow = folderPanel() || document;
+      const ins = [...panelNow.querySelectorAll("input")].filter(
+        (e) => visible(e) && (e.type === "text" || e.type === "")
       );
-      return ins[0];
-    }, 5000);
+      // prefer one still holding the default name, else the last visible one
+      return ins.find((e) => e.value === "Untitled folder") || ins[ins.length - 1];
+    }, 6000);
 
     // set value the Angular-compatible way
     const setter = Object.getOwnPropertyDescriptor(
@@ -111,14 +116,22 @@
     setter.call(input, name);
     input.dispatchEvent(new Event("input", { bubbles: true }));
     await sleep(150);
-    input.dispatchEvent(
-      new KeyboardEvent("keydown", { key: "Enter", keyCode: 13, bubbles: true })
-    );
-    input.dispatchEvent(
-      new KeyboardEvent("keyup", { key: "Enter", keyCode: 13, bubbles: true })
-    );
-    input.dispatchEvent(new Event("change", { bubbles: true }));
-    input.blur();
+
+    // Commit: prefer the row's confirm (checkmark) control; fall back to Enter.
+    let confirmRow = input;
+    for (let i = 0; i < 6 && confirmRow; i++) {
+      if (confirmRow.querySelector && confirmRow.querySelector('img[src*="check"], img[src*="confirm"], img[src*="done"], img[src*="ok"]')) break;
+      confirmRow = confirmRow.parentElement;
+    }
+    const check = confirmRow && confirmRow.querySelector('img[src*="check"], img[src*="confirm"], img[src*="done"], img[src*="ok"]');
+    if (check) {
+      check.click();
+    } else {
+      input.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", keyCode: 13, bubbles: true }));
+      input.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter", keyCode: 13, bubbles: true }));
+      input.dispatchEvent(new Event("change", { bubbles: true }));
+      input.blur();
+    }
 
     // confirm the renamed folder appears
     await waitFor(() => leafByText(name, folderPanel()), 8000);
