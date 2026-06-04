@@ -135,7 +135,9 @@ async function buildContent() {
   }
   const { lines, perScenario } = buildLin(scenarios, total, mode, start, Math.random, rotation);
   const custom = $("customName").value.trim();
-  const name = custom || uploadName(names, total, rotation);
+  const name = custom
+    ? `${custom} R${rotation} D${total}`
+    : uploadName(names, total, rotation);
   const summary = Object.entries(perScenario)
     .map(([k, v]) => `${k}: ${v}`)
     .join(", ");
