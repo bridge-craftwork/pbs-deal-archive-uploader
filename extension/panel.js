@@ -1,7 +1,7 @@
 import { buildLin, uploadName } from "./core.js";
 
 const BASE =
-  "https://raw.githubusercontent.com/ADavidBailey/pbs-deal-archive-uploader/main/scenarios/";
+  "https://raw.githubusercontent.com/bridge-craftwork/pbs-deal-archive-uploader/main/scenarios/";
 const INDEX_TTL_MS = 60 * 60 * 1000; // 1 hour
 
 const $ = (id) => document.getElementById(id);
